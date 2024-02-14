@@ -40,7 +40,7 @@ margin: 0 auto;
     display: flex;
     align-items:center;
     margin-right: auto;
-    
+    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container{
@@ -71,7 +71,9 @@ margin: 0 auto;
         line-height: 1.17;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        
+        position: relative;
+    
+
         
 }
  .header-menu-link {
@@ -82,8 +84,28 @@ margin: 0 auto;
      letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
+   
+}
+ .studio-link{
+position: relative;
+    color: #404bbf;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+        
  }
+ 
+        .studio-link::after{
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 4px;
+            background-color: #404bbf;
+            border-radius: 2px;
+
+        }
+
    .header-menu-list {
        display: flex;
     align-items: center;
@@ -109,6 +131,7 @@ color:#404bbf;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     .header-contact:hover,
     .header-contact:focus{
@@ -119,8 +142,15 @@ color:#404bbf;
 
 
 .hero {
-    background-color: var(--NAVY-BLUE, #2E2F42);
+    background-color:  #2E2F42; 
+    
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+        max-width: 1440px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
  padding: 188px 0 188px;
+
 
 
     }
@@ -137,7 +167,8 @@ margin: 0 auto;
 margin-bottom: 48px;
 }
 .hero-btn {
-    background-color: #4D5AE5
+    background-color: #4D5AE5;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .hero-btn {
         color:  #FFF;
@@ -154,6 +185,7 @@ margin-bottom: 48px;
             margin-left: auto;
             margin-right: auto;
             border-radius: 4px;
+    
         }
     
          
@@ -190,6 +222,16 @@ background-color: #404BBF
  .feature-item {
     width: calc((100% - 72px) / 4);
  }
+ .features-list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+ }
+
         
  .fatures-subtitel {
     color: #2E2F42;
@@ -240,6 +282,9 @@ display: flex;
     align-items: center;
     gap: 24px;
    
+}
+.icon-icon{
+    
 }
 
 .team-item {
